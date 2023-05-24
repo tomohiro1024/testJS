@@ -1,4 +1,4 @@
 
-setTimeout(function(){
-    console.log('setTimeout call')
-}, 5000)
+const plus = require('./helper')
+
+console.log(plus(2,5))
