@@ -1,4 +1,8 @@
+// import * as fs from 'node:fs/promises';
 
-const plus = require('./helper')
+const fs = require('fs')
 
-console.log(plus(2,5))
+
+fs.writeFileSync('test.txt', 'Hello', function() {
+    console.log('OK')
+})

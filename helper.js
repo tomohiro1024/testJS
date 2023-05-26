@@ -4,4 +4,7 @@ const plus = function (a, b) {
     return a + b
 } 
 
-module.exports = plus;
+module.exports = {
+    name: name,
+    plus: plus,
+}
