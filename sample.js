@@ -1,25 +1,15 @@
-// import * as fs from 'node:fs/promises';
-
-const fs = require('fs')
+const {read, write} = require('./helper')
 
 console.log('start')
-
-
-
-
 
 console.log(process.argv[2])
 
 const request = process.argv[2]
 
 if(request === 'read') {
-    fs.readFile('./test.txt', 'utf8', function(err, data){
-        console.log(data)
-     })
+    read()
 } else if (request === 'write') {
-    fs.writeFileSync('test.txt', 'Hello', function() {
-        console.log('OK')
-    })
+    write()
 } else {
     console.error('error!!!')
 }

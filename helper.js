@@ -1,10 +1,18 @@
-const name = 'taro'
+const fs = require('fs')
 
-const plus = function (a, b) {
-    return a + b
+const read = function () {
+    fs.readFile('./test.txt', 'utf8', function(err, data){
+        console.log(data)
+     })
+}
+
+const write = function () {
+    fs.writeFileSync('test.txt', 'Hello!!!', function() {
+        console.log('OK')
+    })
 } 
 
 module.exports = {
-    name: name,
-    plus: plus,
+    read: read,
+    write: write,
 }
