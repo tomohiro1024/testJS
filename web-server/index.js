@@ -5,4 +5,12 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
 
-app.listen(3000)
+app.get('/apple', function (req, res) {
+    res.send('APPLE!!!!!!')
+  })
+
+app.listen(3000, function() {
+    console.log('running!!!')
+})
+
+console.log('end')
