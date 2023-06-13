@@ -13,7 +13,11 @@ app.use(express.static(path.join(__dirname,'public')))
 
 app.post('/api/v1/quiz', function (req, res) {
   const answer = req.body.answer
-  res.send(answer)
+  if(answer === '5') {
+    res.send('OK')
+  } else {
+    res.send('NG')
+  }
 })
 
 app.get('/apple', function (req, res) {
